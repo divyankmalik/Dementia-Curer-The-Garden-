@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url('https://th.bing.com/th/id/OIG.I92AE0R8XI0yqM8W0k1B?pid=ImgGn');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .buttonfart {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        padding: 10px 20px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .buttonfart:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let boxes = [];
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+
+  // Define the content for each box
+  let content = [
+    "Our mission: Help elderly with dementia through daily game usage.",
+    "Games develop Cognitive Stimulation, Task Management, Sensory Stimulation.",
+    "Pixel Pair Panorama: Identify family members in a memory game.",
+    "Geometry Genius: Drag and drop shapes to respective molds with visual feedback.",
+    "WordSmith Wonder: Decode random letters to form correct words.",
+    "Riddle Rumble:Answer questions by typing in the blank space provided."
+  ];
+
+  // Create boxes
+  for (let i = 0; i < content.length; i++) {
+    let box = {
+      x: 20,
+      y: windowHeight - windowHeight / 1.5 + i * 80,
+      width: windowWidth - 40,
+      height: 70, // Adjust the height here
+      text: content[i]
+    };
+    boxes.push(box);
+  }
+}
+
+function draw() {
+  // Draw boxes
+  for (let i = 0; i < boxes.length; i++) {
+    drawYellowBox(boxes[i].x, boxes[i].y, boxes[i].width, boxes[i].height);
+    textSize(14); // Adjust the text size if needed
+    fill('black');
+    text(boxes[i].text, boxes[i].x + 10, boxes[i].y + 15, boxes[i].width - 20, boxes[i].height - 30);
+  }
+}
+
+function drawYellowBox(x, y, width, height) {
+  fill('#ffcc00');
+  stroke('rgba(0, 0, 0, 0.2)');
+  strokeWeight(2);
+  rect(x, y, width, height, 10);
+}
+
+    </script>
+    <a href="Main.html">
+      <button class="buttonfart">Go Back to Main</button>
+    </a>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 600px; /* Limit the container width */
+  height:200px;
+    animation: floatUpDown3 3s infinite;
+  
+  }
+  .container2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 400px; /* Limit the container width */
+  height:200px
+  animation floatUpDown3 3s infinite; 
+      animation: floatUpDown3 3s infinite;
+  
+  }
+  
+  
+  .box {
+    flex: 1;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0 10px; /* Add spacing between boxes */
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+    animation: floatUpDown3 3s infinite;
+    
+  
+  }
+  
+  /* Set a fixed width for all boxes */
+  .container .box {
+    width: 200px;
+  }
+  
+  /* Position Box 4 and Box 5 in the middle of the gaps */
+  
+  
+  .container .box:nth-child(1){
+  background-image:url('https://scontent-lax3-2.xx.fbcdn.net/v/t1.15752-9/403639983_1344734956434515_3700824755363908560_n.jpg?stp=dst-jpg_p403x403&_nc_cat=111&ccb=1-7&_nc_sid=510075&_nc_ohc=eyNyf3Kbgw0AX_PamWl&_nc_ht=scontent-lax3-2.xx&oh=03_AdRIPM2zV1xfsSodVTK8FaJeoNWVUeWc3pxd-BeXu61hXA&oe=658DD7A1');
+  background-repeat: no-repeat;
+  background-size: cover;
+    background-position:center;
+           border: 2px solid;
+  border-color: silver;
+  }
+  
+  .container .box:nth-child(2){
+  background-image:url('https://media.discordapp.net/attachments/1145053077167157359/1172344779141546055/IMG_8853.jpg?ex=655ffa28&is=654d8528&hm=012092ae61ed8b3ceb1e1b17ff7fbf33fe8708c5253ead369c463516e4607d24&=&width=704&height=938');
+  background-repeat: no-repeat;
+  background-size: cover;
+      background-size: 170px 210px 10px;
+    background-position:center;
+          border: 2px solid;
+  border-color: silver;
+  }
+  .container .box:nth-child(3){
+  background-image:url('https://media.discordapp.net/attachments/1145053077167157359/1172353895029297193/2FA36DD0-62F8-4570-843C-E8459328EFE3.jpg?ex=656002a5&is=654d8da5&hm=c430f0eb7e38cbb0bb8442ce56dadde155b6872c00ab0a9bcafc56dfbbe0afa1&=&width=614&height=938');
+  background-repeat: no-repeat;
+  background-size: cover;
+    background-size: 180px 300px;
+            border: 2px solid;
+  border-color: silver;
+    
+  }
+  .container2 .box:nth-child(1){
+  background-image:url('https://media.discordapp.net/attachments/1145053077167157359/1153529153455403119/20230918_144305.jpg?ex=655c203d&is=6549ab3d&hm=6f3e7b8a01123d96855c899fd85c7115339283aaf915ae3659e4bdef234578bf&=&width=704&height=938');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size:200px 200px 10px; 
+    height: 160px;
+         border: 2px solid;
+  border-color: silver;
+    background-position:center;
+  }
+  .container2 .box:nth-child(2){
+  background-image:url('https://cdn.discordapp.com/attachments/1145053077167157359/1174163484192276501/IMG_2631.png?ex=656697f5&is=655422f5&hm=ed89545184b0e2cca100cb8540a4259bec10bea93201854aea76dc1f68370d5f&');
+  background-repeat: no-repeat;
+  background-size: cover;
+    background-size: 180px 300px;  
+  }
+  
+  
+  
+  .box:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05); /* Add a scaling effect on hover */
+  }
+  
+  /* Additional CSS for positioning the boxes */
+  .container:nth-child(1) {
+    margin-bottom: 100px; /* Add spacing between rows */
+  }
+  html, body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://th.bing.com/th/id/OIG.I92AE0R8XI0yqM8W0k1B?pid=ImgGn');
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+  canvas {
+  display: flex;
+  }
+  h1 {
+  background-color: #8ac5ef;
+    font-size: 35px;
+    padding: 10px;
+    font-family: fantasy;
+    border-radius: 50px;
+    height: 80px;
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    
+    text-justify: auto;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    justify-content: center;
+  }
+  @keyframes floatUpDown3 {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px); /* Adjust the float height as needed */
+  }
+  }
+  .buttonfart{
+  position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .box{
+            font-size: large;
+            color:black; /* Yellow color */
+            text-align: center;
+            font-family: fantasy, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px rgb(255, 192, 203), 0 0 20px rgb(255, 192, 203), 0 0 30px rgb(255, 192, 203);
+         animation: floatUpDown3 3s infinite;
+    animation: glowing 3s infinite;
+  
+        }
+  
+  @keyframes glowing {
+    0% {
+      box-shadow: 0 0 5px #8ac5ef;
+    }
+    50% {
+      box-shadow: 0 0 20px #8ac5ef, 0 0 30px #8ac5ef;
+    }
+    100% {
+      box-shadow: 0 0 5px #8ac5ef;
+    }
+  }

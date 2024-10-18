@@ -1,0 +1,280 @@
+/* Global styles */
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color:rgb(91, 59, 135);
+  background-image: url('https://th.bing.com/th/id/OIG.I92AE0R8XI0yqM8W0k1B?pid=ImgGn');
+background-repeat:no-repeat;
+background-size: cover;
+  margin: 0;
+  padding: 0;
+  background-position: 30%;
+}
+
+
+
+header {
+  background-color: #8ac5ef;
+  font-size: small;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  border-radius: 50px;
+  height: 80px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  animation: floatUpDown2 3s infinite;
+}
+
+header h1 {
+
+  color: #fff;
+
+}
+
+nav ul {
+  list-style: none;
+  background-color: #b295f1;
+  text-align: center;
+  justify-content: center;
+  height: 100px
+}
+
+nav ul li {
+  display: flex;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #b295f1;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: #15b1e4;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+}
+
+
+
+/* Customize styles for each page as needed */
+/* Butterfly effect*/
+.butterflies-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.butterfly {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color:  #b2c725; /* Pink color for butterflies, you can change it */
+  border-radius: 50%;
+  animation: flutter 4s linear infinite, fly 10s linear infinite;
+}
+@keyframes flutter {
+  0%, 100% {
+      transform: translateX(0) translateY(0);
+  }
+  50% {
+      transform: translateX(-20px) translateY(-20px);
+  }
+}
+@keyframes fly {
+  0% {
+      transform: translateX(0) translateY(0);
+  }
+  100% {
+      transform: translateX(100vw) translateY(calc(100vh - 50px));
+  }
+}
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-10px); /* Adjust the bounce height as needed */
+  }
+}
+
+/* Firefly effect*/
+
+
+.firefly-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.firefly {
+  width: 10px;
+  height: 10px;
+  background-color: #f8ff26; /* Firefly color */
+  border-radius: 50%;
+  position: absolute;
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.5;
+      transform: scale(0.9);
+  }
+  100% {
+      opacity: 1;
+  }
+}
+/* Dropdown Container */
+.dropdown {
+  position:relative;
+  display: inline-block;
+  margin: 15px;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #ffcc00; /* Yellow */
+  color: #333;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  animation: floatUpDown1 3s infinite;
+}
+
+
+
+
+.dropbtn:hover {
+  background-color: #ff9900; /* Darker yellow on hover */
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffcc00; /* Yellow */
+  min-width: 160px;
+  border: 1px solid #ff9900; /* Orange border */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+}
+/*Anime Dropdown Box
+/* Anime-like Hover Effect */
+.dropdown-content a:hover {
+  background-color: #ff9900; /* Orange on hover */
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Anime-inspired Border */
+.dropdown-content:before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: calc(50% - 4px);
+  border-style: solid;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #ffcc00 transparent;
+}
+
+/* floating textbox */
+
+
+@keyframes floatUpDown1 {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-30px); /* Adjust the float height as needed */
+  }
+}
+@keyframes floatUpDown2 {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px); /* Adjust the float height as needed */
+  }
+}
+@keyframes floatUpDown3 {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px); /* Adjust the float height as needed */
+  }
+}
+
+
+/* design and hover for 3 columns */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: auto; /* Limit the container width */
+}
+
+.column {
+  flex: 1;
+  padding: 40px;
+  padding-bottom: 40px;
+  background-color:gold ;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 255);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 0 10px;
+  border-radius: 50px;
+  text-align: center;
+  justify-content: center;
+  animation: floatUpDown3 5s infinite;
+  
+}
+
+
+.column:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 255);
+  transform: scale(1.05); /* Add a scaling effect on hover */
+}
+.dropbtn {
+  display: inline-block;
+
+}

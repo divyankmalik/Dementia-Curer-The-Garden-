@@ -1,0 +1,115 @@
+body {
+    font-family: Georgia;
+    text-align: center;
+    background-image: url('https://th.bing.com/th/id/OIG.I92AE0R8XI0yqM8W0k1B?pid=ImgGn');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header{
+font-size: xx-large;
+    font-family: Georgia;
+    margin-top: 50px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 500px; /* Set the width of the box as per your requirement */
+  height: 100px; /* Set the height of the box as per your requirement */
+  background-color: #3498db; /* Set the background color */
+  border-radius: 25px; /* Set half of the height for a pill-shaped border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+text-align: center;
+margin-left: 480px;
+}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.image-container {
+    max-width: 700px;
+    margin-top: 20px;
+    border: 5px solid #8ac5ef;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: pink;
+    box-shadow: 0px 0px 50px #8ac5ef;
+    transform: translateY(-150px);
+
+}
+.image-container img {
+    height: 500px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+.options-container {
+    margin-top: 20px;
+}
+
+#options button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: pink;
+    border-color: #8ac5ef;
+    border-radius: 10px;
+    transform: translateY(-150px);
+
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: none; 
+    z-index: 9999; 
+}
+.buttonfart {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttonfart:hover {
+    background: #0056b3;
+}
+#correctCount {
+    border: 5px solid #8ac5ef;
+    padding: 10px;
+    margin: 5px;
+   margin-right: auto;
+    background-color: pink;
+    border-radius: 10px;
+    width: 300px;
+    height:50px;
+    text-align: center;
+    font-size: x-large;
+    font-family: Georgia;
+}
+#wrongCount{
+    border: 5px solid #8ac5ef;
+    padding: 10px;
+transform: translateY(-50px);
+   margin-left: auto;
+    background-color: pink;
+    border-radius: 10px;
+    width: 300px;
+    height:50px;
+    text-align: center;
+    font-size: x-large;
+    font-family: Georgia;
+}

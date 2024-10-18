@@ -1,0 +1,55 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Georgia;
+    background: url('https://img.freepik.com/free-photo/free-photo-good-friday-background-with-jesus-christ-cross_1340-28455.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    text-transform: uppecase;
+    letter-spacing: 3px;
+    color: orange;
+}
+
+.login-container input {
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+  font-size:small;;
+}
+
+.login-cotainer button {
+    background-color: orange;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: orange;
+}
+
+@media (max-wdith:480px) {
+    .login-container {
+        width: 80%;
+    }
+}

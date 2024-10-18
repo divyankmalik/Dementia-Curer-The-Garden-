@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Trivia Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+    <h1>Riddle Rumble </h1>
+    <div class="container">
+    <h2 id="question">Question Goes Here</h2>
+    <input type="text" id="answer" placeholder="Your Answer">
+    <button id="submitBtn">Submit Answer</button>
+    <button id="nextBtn">Next Question</button>
+    <p id="result">Answer</p>
+    <p id="score">Correct: 0</p>
+    <audio id="audio" src="FNAF- Kids Cheering - Gaming Sound Effect (HD)-[AudioTrimmer.com].mp3"></audio>
+    <audio id="audio2" src="Aww Sound Effect.mp3"></audio>
+
+</div>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('https://th.bing.com/th/id/OIG.I92AE0R8XI0yqM8W0k1B?pid=ImgGn');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#result{
+    border-radius: 10px;
+  background: rgb(201, 217, 246);
+  box-shadow: 0px 0px 50px #8ac5ef;
+  border: 5px solid #8ac5ef;
+  margin-top: 10px;
+padding-top: 5px;
+}
+#score{
+    margin-left: 180px;
+    width: 100px;
+    border-radius: 10px;
+  background: rgb(201, 217, 246);
+  box-shadow: 0px 0px 50px #8ac5ef;
+  border: 5px solid #8ac5ef;
+  margin-top: 10px;
+padding-top: 5px; 
+}
+
+   .container {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 500px;
+  height: 350px;
+  border-radius: 50px;
+  background: rgb(246, 201, 209);
+  box-shadow: 0px 0px 50px #8ac5ef;
+  border: 5px solid #8ac5ef;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+margin-left: 35%;
+padding-top: 60px;
+animation: floatUpDown 3s infinite; 
+
+   }
+   h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 50px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 500px; /* Set the width of the box as per your requirement */
+  height: 100px; /* Set the height of the box as per your requirement */
+  background-color: #3498db; /* Set the background color */
+  border-radius: 25px; /* Set half of the height for a pill-shaped border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 35%;
+text-align: center;
+animation: glowing 1s infinite; 
+animation: floatUpDown 1s infinite; 
+
+   }
+
+   @keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #8ac5ef;
+  }
+  50% {
+    box-shadow: 0 0 20px #8ac5ef, 0 0 30px #8ac5ef;
+  }
+  100% {
+    box-shadow: 0 0 5px #8ac5ef;
+  }
+}
+
+.buttonfart {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust the float height as needed */
+    }
+}
+
+
+
+
+
+    </style>
+    <script>
+        let score = 0;
+        let currentQuestion=0;
+        let questions = [
+            { question: "How many oceans are there?", answer: "7",},
+            { question: "What is the biggest ocean on Earth?", answer: "pacific" },
+            { question: "Which is the largest animal on Earth?", answer: "blue Whale" },
+            { question: "What is the fastest land animal in the world?", answer: "cheetah" },
+            { question: "How many eyes does a bee have?", answer: "five" },
+            { question: "Which planet is known as the Red Planet?", answer: "mars" },
+{ question: "What is the largest mammal on land?", answer: "elephant" },
+{ question: "In which year did the Titanic sink?", answer: "1912" },
+{ question: "What is the capital city of Japan?", answer: "tokyo" },
+{ question: "How many continents are there?", answer: "7" },
+{ question: "Which gas do plants absorb from the atmosphere?", answer: "carbon dioxide" },
+{ question: "What is the largest desert in the world?", answer: "antarctica" },
+{ question: "Which element has the chemical symbol 'O'?", answer: "oxygen" },
+{ question: "What is the largest planet in our solar system?", answer: "jupiter" },
+{ question: "Who wrote 'Romeo and Juliet'?", answer: "william shakespeare" },
+{ question: "What is the capital city of Australia?", answer: "canberra" },
+{ question: "Which mountain is the tallest in the world?", answer: "mount everest" },
+{ question: "What is the smallest prime number?", answer: "2" },
+{ question: "Which gas do humans primarily breathe in?", answer: "oxygen" },
+{ question: "In what year did the United States declare its independence?", answer: "1776" },
+{ question: "What is the chemical symbol for gold?", answer: "au" },
+{ question: "Which ocean is the saltiest?", answer: "atlantic ocean" },
+{ question: "What is the main ingredient in guacamole?", answer: "avocado" },
+{ question: "What is the Earth's approximate circumference?", answer: "40,075 kilometers" },
+{ question: "Which famous scientist developed the theory of general relativity?", answer: "albert einstein" }
+        ];
+
+        function shuffleArray(array) {
+            // Fisher-Yates shuffle algorithm
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+
+
+
+        function setup() {
+            noCanvas();
+            shuffleArray(questions);
+            displayQuestion();
+
+            const submitButton = document.getElementById("submitBtn");
+            submitButton.addEventListener("click", checkAnswer);
+
+            const nextButton = document.getElementById("nextBtn");
+            nextButton.addEventListener("click", moveToNextQuestion);
+        }
+
+        function displayQuestion() {
+            document.getElementById("question").textContent = questions[currentQuestion].question;
+            document.getElementById("answer").value = "";
+            document.getElementById("result").textContent = "Answer";
+        }
+
+        function displayCorrectAnswer() {
+            document.getElementById("result").textContent = "Correct!";
+            console.log("Correct");
+            score++;
+            updateCountElements();
+        }
+
+        function displayWrongAnswer() {
+            const correctAnswer = questions[currentQuestion].answer.toLowerCase();
+            document.getElementById("result").textContent = "Incorrect. The correct answer is: " + correctAnswer;
+            console.log("Incorrect. The correct answer is: " + correctAnswer);
+        }
+
+        function checkAnswer() {
+            console.log("checkAnswer() function is called");
+            const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
+            const correctAnswer = questions[currentQuestion].answer.toLowerCase();
+
+            if (userAnswer === correctAnswer) {
+                displayCorrectAnswer();
+                var audio = document.getElementById('audio');
+    audio.play();
+            } else {
+                displayWrongAnswer();
+                var audio2 = document.getElementById('audio2');
+    audio2.play();
+            }
+        }
+
+        function updateCountElements() {
+            const correctCountElement = document.getElementById('score');
+            correctCountElement.textContent = `Correct: ${score}`;
+        }
+
+        function moveToNextQuestion() {
+            // Move to the next question or end the game
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                displayQuestion();
+            } else {
+                document.getElementById("question").textContent = "Trivia Game Complete!";
+                document.getElementById("answer").style.display = "none";
+                document.getElementById("result").style.display = "none";
+                document.getElementById("nextBtn").style.display = "none";
+            }
+        }
+
+        // Call setup once
+        setup();
+    </script>
+
+     <a href="Main.html">
+        <button class="buttonfart">Go Back to Main</button>
+    </a>
+</body>
+</html>

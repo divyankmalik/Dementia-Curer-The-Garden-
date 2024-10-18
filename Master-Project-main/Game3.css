@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap');
+
+.PPAP{
+font-size: xx-large;
+font-family: Georgia, 'Times New Roman', Times, serif;
+animation: floatSide 3s infinite; 
+}
+.intro_card{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+ 
+ font-size: 30px;
+  box-shadow: 0px 0px 50px rgb(203, 201, 246);
+
+}
+body {
+    font-family: Arial, sans-serif;
+    box-shadow: 0, 0 , 0.0 rgba(0, 0, 0, 0.6);
+    text-align: center;
+    background-image: url('https://th.bing.com/th/id/OIG.I92AE0R8XI0yqM8W0k1B?pid=ImgGn');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-position: 30%;
+}
+header {
+    background-color: #8ac5ef;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 50px;
+    height: 80px;
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 50px rgb(246, 201, 209);
+    animation: floatUpDown2 3s infinite;
+    text-justify: auto;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    justify-content: center;
+}
+
+
+  @keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    }
+    20%, 24%, 55% {       
+      text-shadow: none;
+    }
+  }
+p {
+    font-size: xx-large;
+    font-family: 'DM Sans', sans-serif;
+    justify-content: center;
+    align-content: center;
+
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.color-shape {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: border 0.3s;
+    transform: translateY(20%);
+}
+.red {
+    background-color: red;
+    border-radius: 50%;
+    animation: floatUpDown 3.4s infinite;
+}
+.green {
+    background-color: green;
+    border-radius: 50%;
+    animation: floatUpDown 3.1s infinite;
+}
+.blue {
+    background-color: blue;
+    width: 250px;
+    height: 150px;
+    animation: floatUpDown 3.6s infinite;
+}
+.yellow {
+    background-color: yellow;
+    width: 250px;
+    height: 150px;
+    animation: floatUpDown 3.2s infinite;
+}
+.purple {
+    background-color: purple;
+    width: 150px;
+    height: 150px;
+    animation: floatUpDown 3.5s infinite;
+}
+.orange {
+    background-color: orange;
+    width: 150px;
+    height: 150px;
+    animation: floatUpDown 3.3s infinite;
+}
+
+.color-name-target {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid black;
+    transform: translateY(20%);
+    display: inline-block;
+    text-align: center;
+}
+.color-name-target span {
+    display: inline-block;
+    margin-top: 65px;
+}
+.correct-match {
+    background-color: #4a4a4b !important;
+}
+.rred {
+    background-color: white;
+    border-radius: 50%;
+    
+}
+.ggreen {
+    background-color: white;
+    border-radius: 50%;
+}
+.bblue {
+    background-color: white;
+    width: 250px;
+    height: 150px;
+}
+.yyellow {
+    background-color: white;
+    width: 250px;
+    height: 150px;
+}
+.ppurple {
+    background-color:white;
+    width: 150px;
+    height: 150px;
+}
+.oorange {
+    background-color: white;
+    width: 150px;
+    height: 150px;
+}
+.color-shape:hover {
+    border: 2px dashed black; 
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#close-popup {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+body{
+background-repeat: no-repeat;
+background-size:cover;
+animation: mymove 10s infinite;
+}
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); 
+    }
+}
+
+@keyframes floatSide {
+  0% {
+      transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+}
+
+
+  100% {
+      transform: translateX(-15px); 
+  }
+}
+
+
+.buttonfart {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonfart:hover {
+    background: #0056b3;
+}
+.timer-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .timer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: #333;
+    background-color:pink;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #888;
+  }
