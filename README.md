@@ -19,7 +19,7 @@ WordSmith Wonders:-This Game asks the user to unscrabble the words within 30 sec
 Pixel Pair Panorama:- This Game shows the user a picture of a person close to them and asks the user to identify them and select an option from the options provided.
 
 **WHAT NEEDS WORK?**
-The Pixel Panorama Game needs to include a page where the user can input pictures of their close ones in order to customize the experience according to their personal prefrence.
+The Pixel Panorama Game and the Home Page needs to include a page where the user can input pictures of their close ones in order to customize the experience according to their personal prefrence.
 
 **TEST CASES**
 Each of our teammate asked elders in our family to play this game and find out if its helpful for them. In total we had 12 people who used the app out of which 9 people found it useful, which is about a **75% success rate**. 
